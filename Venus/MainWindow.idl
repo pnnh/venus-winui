@@ -4,6 +4,6 @@ namespace Venus
     runtimeclass MainWindow : Microsoft.UI.Xaml.Window
     {
         MainWindow();
-        Int32 MyProperty;
+        Windows.Foundation.Collections.IVector<IInspectable> Images{ get; };
     }
 }

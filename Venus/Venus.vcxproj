@@ -107,6 +107,7 @@
     <Manifest Include="app.manifest" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ImageFileInfo.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="App.xaml.h">
       <DependentUpon>App.xaml</DependentUpon>
@@ -120,6 +121,7 @@
     <Page Include="MainWindow.xaml" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="ImageFileInfo.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>
@@ -132,6 +134,7 @@
     <ClCompile Include="$(GeneratedFilesDir)module.g.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <Midl Include="ImageFileInfo.idl" />
     <Midl Include="MainWindow.idl">
       <SubType>Code</SubType>
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -144,6 +147,26 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="Assets\LockScreenLogo.scale-200.png" />
+    <Image Include="Assets\Samples\1.jpg" />
+    <Image Include="Assets\Samples\10.jpg" />
+    <Image Include="Assets\Samples\11.jpg" />
+    <Image Include="Assets\Samples\12.jpg" />
+    <Image Include="Assets\Samples\13.jpg" />
+    <Image Include="Assets\Samples\14.jpg" />
+    <Image Include="Assets\Samples\15.jpg" />
+    <Image Include="Assets\Samples\16.jpg" />
+    <Image Include="Assets\Samples\17.jpg" />
+    <Image Include="Assets\Samples\18.jpg" />
+    <Image Include="Assets\Samples\19.jpg" />
+    <Image Include="Assets\Samples\2.jpg" />
+    <Image Include="Assets\Samples\20.jpg" />
+    <Image Include="Assets\Samples\3.jpg" />
+    <Image Include="Assets\Samples\4.jpg" />
+    <Image Include="Assets\Samples\5.jpg" />
+    <Image Include="Assets\Samples\6.jpg" />
+    <Image Include="Assets\Samples\7.jpg" />
+    <Image Include="Assets\Samples\8.jpg" />
+    <Image Include="Assets\Samples\9.jpg" />
     <Image Include="Assets\SplashScreen.scale-200.png" />
     <Image Include="Assets\Square150x150Logo.scale-200.png" />
     <Image Include="Assets\Square44x44Logo.scale-200.png" />

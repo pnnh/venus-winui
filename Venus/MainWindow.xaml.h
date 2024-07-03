@@ -6,16 +6,26 @@ namespace winrt::Venus::implementation
 {
     struct MainWindow : MainWindowT<MainWindow>
     {
-        MainWindow()
+        MainWindow();
+
+        Windows::Foundation::Collections::IVector<Windows::Foundation::IInspectable> Images() const
         {
-            // Xaml objects should not call InitializeComponent during construction.
-            // See https://github.com/microsoft/cppwinrt/tree/master/nuget#initializecomponent
+            return m_images;
         }
 
-        int32_t MyProperty();
-        void MyProperty(int32_t value);
+        void ImageGridView_ContainerContentChanging(
+            Microsoft::UI::Xaml::Controls::ListViewBase const& sender,
+            Microsoft::UI::Xaml::Controls::ContainerContentChangingEventArgs const& args);
 
-        void myButton_Click(IInspectable const& sender, Microsoft::UI::Xaml::RoutedEventArgs const& args);
+    private:
+        Windows::Foundation::Collections::IVector<IInspectable> m_images{ nullptr };
+
+        Windows::Foundation::IAsyncAction GetItemsAsync();
+        Windows::Foundation::IAsyncOperation<Venus::ImageFileInfo> LoadImageInfoAsync(Windows::Storage::StorageFile);
+        
+        fire_and_forget ShowImage(
+            Microsoft::UI::Xaml::Controls::ListViewBase const& sender,
+            Microsoft::UI::Xaml::Controls::ContainerContentChangingEventArgs const& args);
     };
 }
 

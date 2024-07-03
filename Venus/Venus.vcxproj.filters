@@ -8,13 +8,16 @@
   </ItemGroup>
   <ItemGroup>
     <Midl Include="MainWindow.idl" />
+    <Midl Include="ImageFileInfo.idl" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp" />
     <ClCompile Include="$(GeneratedFilesDir)module.g.cpp" />
+    <ClCompile Include="ImageFileInfo.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
+    <ClInclude Include="ImageFileInfo.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="Assets\Wide310x150Logo.scale-200.png">
@@ -38,10 +41,73 @@
     <Image Include="Assets\LockScreenLogo.scale-200.png">
       <Filter>Assets</Filter>
     </Image>
+    <Image Include="Assets\Samples\1.jpg">
+      <Filter>Assets\Samples</Filter>
+    </Image>
+    <Image Include="Assets\Samples\2.jpg">
+      <Filter>Assets\Samples</Filter>
+    </Image>
+    <Image Include="Assets\Samples\3.jpg">
+      <Filter>Assets\Samples</Filter>
+    </Image>
+    <Image Include="Assets\Samples\4.jpg">
+      <Filter>Assets\Samples</Filter>
+    </Image>
+    <Image Include="Assets\Samples\5.jpg">
+      <Filter>Assets\Samples</Filter>
+    </Image>
+    <Image Include="Assets\Samples\6.jpg">
+      <Filter>Assets\Samples</Filter>
+    </Image>
+    <Image Include="Assets\Samples\7.jpg">
+      <Filter>Assets\Samples</Filter>
+    </Image>
+    <Image Include="Assets\Samples\8.jpg">
+      <Filter>Assets\Samples</Filter>
+    </Image>
+    <Image Include="Assets\Samples\9.jpg">
+      <Filter>Assets\Samples</Filter>
+    </Image>
+    <Image Include="Assets\Samples\10.jpg">
+      <Filter>Assets\Samples</Filter>
+    </Image>
+    <Image Include="Assets\Samples\11.jpg">
+      <Filter>Assets\Samples</Filter>
+    </Image>
+    <Image Include="Assets\Samples\12.jpg">
+      <Filter>Assets\Samples</Filter>
+    </Image>
+    <Image Include="Assets\Samples\13.jpg">
+      <Filter>Assets\Samples</Filter>
+    </Image>
+    <Image Include="Assets\Samples\14.jpg">
+      <Filter>Assets\Samples</Filter>
+    </Image>
+    <Image Include="Assets\Samples\15.jpg">
+      <Filter>Assets\Samples</Filter>
+    </Image>
+    <Image Include="Assets\Samples\16.jpg">
+      <Filter>Assets\Samples</Filter>
+    </Image>
+    <Image Include="Assets\Samples\17.jpg">
+      <Filter>Assets\Samples</Filter>
+    </Image>
+    <Image Include="Assets\Samples\18.jpg">
+      <Filter>Assets\Samples</Filter>
+    </Image>
+    <Image Include="Assets\Samples\19.jpg">
+      <Filter>Assets\Samples</Filter>
+    </Image>
+    <Image Include="Assets\Samples\20.jpg">
+      <Filter>Assets\Samples</Filter>
+    </Image>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Assets">
       <UniqueIdentifier>{6fb0f17d-96bb-4ffa-985e-08d6d690a16b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\Samples">
+      <UniqueIdentifier>{18f056a3-d894-47b0-9023-bcdf5a8793b0}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -55,5 +121,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Natvis Include="$(MSBuildThisFileDirectory)..\..\natvis\wil.natvis" />
   </ItemGroup>
 </Project>

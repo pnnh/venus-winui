@@ -23,3 +23,7 @@
 #include <winrt/Microsoft.UI.Xaml.Shapes.h>
 #include <winrt/Microsoft.UI.Dispatching.h>
 #include <wil/cppwinrt_helpers.h>
+#include <winrt/Windows.Storage.FileProperties.h>
+#include <winrt/Windows.Storage.Search.h>
+#include <winrt/Windows.Storage.Streams.h>
+#include <winrt/Microsoft.UI.Xaml.Media.Imaging.h>
