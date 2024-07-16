@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Venus.UI (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "Venus.UI (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
