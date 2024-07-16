@@ -16,6 +16,8 @@ namespace winrt::Venus::implementation
         void ImageGridView_ContainerContentChanging(
             Microsoft::UI::Xaml::Controls::ListViewBase const& sender,
             Microsoft::UI::Xaml::Controls::ContainerContentChangingEventArgs const& args);
+        
+        void ImageGridView_GridViewSizeChanged(Windows::Foundation::IInspectable const& sender, Microsoft::UI::Xaml::SizeChangedEventArgs const& e);
 
     private:
         Windows::Foundation::Collections::IVector<IInspectable> m_images{ nullptr };

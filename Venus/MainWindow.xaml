@@ -45,20 +45,22 @@
 
             <Style x:Key="ImageGridView_ItemContainerStyle"
                     TargetType="GridViewItem">
-                <Setter Property="Background" Value="Gray"/>
-                <Setter Property="Margin" Value="8"/>
+                <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                <Setter Property="VerticalContentAlignment" Value="Stretch"/>
+                <Setter Property="Margin" Value="0"/>
             </Style>
             <ItemsPanelTemplate x:Key="ImageGridView_ItemsPanelTemplate">
                 <ItemsWrapGrid Orientation="Horizontal"
-                           HorizontalAlignment="Center"/>
+                           HorizontalAlignment="Stretch"/>
             </ItemsPanelTemplate>
         </Grid.Resources>
         <GridView x:Name="ImageGridView"
                 ItemTemplate="{StaticResource ImageGridView_ItemTemplate}"
                 ItemContainerStyle="{StaticResource ImageGridView_ItemContainerStyle}"
                 Background="Green"
-                HorizontalAlignment="Center"
+                HorizontalAlignment="Stretch"
                 ItemsPanel="{StaticResource ImageGridView_ItemsPanelTemplate}"
+                  SizeChanged="ImageGridView_GridViewSizeChanged"
                 ContainerContentChanging="ImageGridView_ContainerContentChanging">
         </GridView>
     </Grid>

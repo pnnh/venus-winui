@@ -7,6 +7,7 @@
 #include "ImageFileInfo.h"
 #include <spdlog/spdlog.h>
 #include <spdlog/sinks/msvc_sink.h>
+#include <algorithm>
 
 namespace winrt
 {
@@ -77,6 +78,16 @@ namespace winrt::Venus::implementation
             args.Handled(true);
         }
     }
+
+    void MainWindow::ImageGridView_GridViewSizeChanged(Windows::Foundation::IInspectable const& sender, SizeChangedEventArgs const& e) {
+       // spdlog::info("ImageGridView_GridViewSizeChanged");
+        double a = std::floor(e.NewSize().Width / 200);
+        auto columns = std::max(1.0, a);
+        auto panel = sender.try_as<ListViewBase>().ItemsPanelRoot().try_as<ItemsWrapGrid>();
+        panel.MaximumRowsOrColumns(columns);
+        panel.ItemWidth(e.NewSize().Width / columns);
+    }
+
 
     fire_and_forget MainWindow::ShowImage(ListViewBase const& sender, ContainerContentChangingEventArgs const& args)
     {
