@@ -2,7 +2,7 @@
 
 #include <string>
 
-namespace native {
+namespace common {
     class Logger {
     public:
         static void log(const std::string& message);

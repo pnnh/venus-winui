@@ -1,8 +1,9 @@
-﻿// Venus.Native.h : Include file for standard system include files,
-// or project specific include files.
-
 #pragma once
 
-#include <iostream>
-
-// TODO: Reference additional headers your program requires here.
+namespace VenusNative {
+	public ref class Class1
+	{
+	public:
+		static void Hello(System::String^ message);
+	};
+}

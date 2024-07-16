@@ -1,11 +1,17 @@
-﻿#include "Venus.Native.h"
-#include "logger/logger.h"
+#include "pch.h"
 
-using namespace std;
+#include "Venus.Native.h"
+#include <iostream>
+#include <logger/logger.h>
+#include <stdlib.h>
+#include <string.h>
+#include <string>
+#include <msclr/marshal.h>
+#include <msclr/marshal_cppstd.h>
 
-int main()
+void VenusNative::Class1::Hello(System::String^ message)
 {
-	cout << "Hello CMake." << endl; 
-	native::Logger::log("Hello from logger.");
-	return 0;
+	std::string str = msclr::interop::marshal_as<std::string>(message);
+	std::cout << "Hello from native: " << str << std::endl;
+	common::Logger::log(str);
 }
