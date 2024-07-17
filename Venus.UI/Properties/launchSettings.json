@@ -1,7 +1,8 @@
 {
   "profiles": {
     "Venus.UI (Package)": {
-      "commandName": "MsixPackage"
+      "commandName": "MsixPackage",
+      "nativeDebugging": true
     },
     "Venus.UI (Unpackaged)": {
       "commandName": "Project"

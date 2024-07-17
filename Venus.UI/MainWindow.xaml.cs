@@ -12,7 +12,6 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
-using VenusNative;
 
 namespace Venus.UI
 {
@@ -29,7 +28,7 @@ namespace Venus.UI
         private void myButton_Click(object sender, RoutedEventArgs e)
         {
             myButton.Content = "Clicked";
-            Class1.Hello("C# String");
+            var cls = new Class();
         }
     }
 }
