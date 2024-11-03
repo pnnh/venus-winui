@@ -28,7 +28,6 @@ namespace Venus.UI
         private void myButton_Click(object sender, RoutedEventArgs e)
         {
             myButton.Content = "Clicked";
-            var cls = new Class();
         }
     }
 }
